@@ -24,7 +24,7 @@ class _RegisterState extends State<Register> {
       };
       var response = await http.post(
         // set the URL
-        Uri.parse('http://192.168.0.224:3000/register'),
+        Uri.parse('http://192.168.43.54:3000/register'),
         // send the data with the body of the request
         body: jsonEncode(body),
         // set the headers
@@ -33,7 +33,7 @@ class _RegisterState extends State<Register> {
       // decode the response to use it later
       var jsonResponse = jsonDecode(response.body);
 
-      print(jsonResponse['success']);
+      print("sdsdf " + jsonResponse['success']);
 
       if (jsonResponse['status']) {
         Navigator.push(
